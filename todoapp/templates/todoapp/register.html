@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Стили для более выделенных полей ввода */
+      .input-field {
+        border: 2px solid #E5E7EB; /* Увеличиваем толщину границы и меняем ее цвет */
+        padding: 10px; /* Увеличиваем отступ вокруг текста внутри поля */
+      }
+
+      /* Стили для кнопки Register при наведении */
+      .btn {
+        transition: background-color 0.3s ease; /* Добавляем плавный переход цвета фона */
+      }
+
+      .btn:hover {
+        background-color: #2563EB; /* Изменяем цвет фона при наведении */
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="wrapper max-w-md w-full bg-white p-8 rounded-lg shadow-md m-4">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Register</h2>
+      {% if messages %}
+        {% for message in messages %}
+          <h2 class="text-xl font-semibold text-red-600">{{message}}</h2>
+        {% endfor %}
+      {% endif %}
+      <form action="#" method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="input-box mb-6">
+          <input type="text" placeholder="Create a username" required name="username" class="input-field">
+        </div>
+        <div class="input-box mb-6">
+          <input type="email" placeholder="Enter your email" required name="email" class="input-field">
+        </div>
+        <div class="input-box mb-6">
+          <input type="password" placeholder="Enter your password" required name="password" class="input-field">
+        </div>
+        <div class="policy">
+        </div>
+        <div class="input-box button mb-6">
+          <input type="submit" value="Register" class="btn text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md">
+        </div>
+        <div class="text mb-4">
+          <h3 class="text-gray-700">Аккаунтингиз борми? <a href="{% url 'login' %}" class="text-blue-500">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
