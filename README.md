@@ -1,12 +1,13 @@
 Create virutal environment
     ```
     
-python -m venv venv
 
+
+python -m venv venv
 venv\Scripts\Activate
 
-    ```
 
+    ```
 Install dependencies
     ```
     
