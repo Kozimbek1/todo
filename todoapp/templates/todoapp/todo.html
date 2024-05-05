@@ -12,7 +12,7 @@
           <div class="card rounded-3">
             <div class="card-body p-4">
 
-              <h4 class="text-center my-3 pb-3">To Do App</h4>
+              <h4 class="text-center my-3 pb-3">To Do</h4>
 
               <form method="POST" class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
                 {% csrf_token %}
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Add Task</button>
+                  <button type="submit" class="btn btn-primary">Task qo'shish</button>
                 </div>
               </form>
               <a href="{% url 'logout' %}"><button style="background: firebrick; color: white;" type="submit" class="btn btn-primary">Logout</button></a>
@@ -41,14 +41,14 @@
                     <td>{{i.todo_name}}</td>
 
                     {% if i.status == True %}
-                      <td>Completed</td>
+                      <td>Bajarildi</td>
                     {% else %}
-                      <td>In progress</td>
+                      <td>Jarayonda</td>
                     {% endif %}
 
                     <td>
-                      <a href="{% url 'delete' i.todo_name %}"><button type="submit" class="btn btn-danger">Delete</button></a>
-                      <a href="{% url 'update' i.todo_name %}"><button type="submit" class="btn btn-success ms-1">Finished</button></a>
+                      <a href="{% url 'delete' i.todo_name %}"><button type="submit" class="btn btn-danger">O'chirish</button></a>
+                      <a href="{% url 'update' i.todo_name %}"><button type="submit" class="btn btn-success ms-1">Yakunlandi</button></a>
                     </td>
                   </tr>
                   {% endfor %}

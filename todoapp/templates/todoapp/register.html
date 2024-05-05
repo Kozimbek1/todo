@@ -5,25 +5,25 @@
     <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      /* Стили для более выделенных полей ввода */
+
       .input-field {
-        border: 2px solid #E5E7EB; /* Увеличиваем толщину границы и меняем ее цвет */
-        padding: 10px; /* Увеличиваем отступ вокруг текста внутри поля */
+        border: 2px solid #E5E7EB;
+        padding: 10px;
       }
 
-      /* Стили для кнопки Register при наведении */
+
       .btn {
-        transition: background-color 0.3s ease; /* Добавляем плавный переход цвета фона */
+        transition: background-color 0.3s ease;
       }
 
       .btn:hover {
-        background-color: #2563EB; /* Изменяем цвет фона при наведении */
+        background-color: #2563EB;
       }
     </style>
   </head>
   <body class="min-h-screen flex items-center justify-center bg-gray-100">
     <div class="wrapper max-w-md w-full bg-white p-8 rounded-lg shadow-md m-4">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Register</h2>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Registratsiya</h2>
       {% if messages %}
         {% for message in messages %}
           <h2 class="text-xl font-semibold text-red-600">{{message}}</h2>
@@ -43,10 +43,10 @@
         <div class="policy">
         </div>
         <div class="input-box button mb-6">
-          <input type="submit" value="Register" class="btn text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md">
+          <input type="submit" value="Registratsiya" class="btn text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md">
         </div>
         <div class="text mb-4">
-          <h3 class="text-gray-700">Аккаунтингиз борми? <a href="{% url 'login' %}" class="text-blue-500">Login now</a></h3>
+          <h3 class="text-gray-700">Akkauntingiz bormi? <a href="{% url 'login' %}" class="text-blue-500">Login</a></h3>
         </div>
       </form>
     </div>
